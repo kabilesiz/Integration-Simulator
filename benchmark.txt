@@ -1,0 +1,992 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 10 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet  restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in /Users/huseyin/RiderProjects/AdCreativeAI-IntegrationCase-main/Integration/bin/Release/net7.0/af7b1b7f-b1af-47fb-940f-6c7624598c7e
+// command took 0.7 sec and exited with 0
+// start dotnet  build -c Release --no-restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in /Users/huseyin/RiderProjects/AdCreativeAI-IntegrationCase-main/Integration/bin/Release/net7.0/af7b1b7f-b1af-47fb-940f-6c7624598c7e
+// command took 1.6 sec and exited with 0
+// ***** Done, took 00:00:02 (2.37 sec)   *****
+// Found 10 benchmarks:
+//   Benchmarks.SingleServerScenario_WithFullUniqueItems: Job-LCLOIE(IterationCount=20, IterationTime=200.0000 ms, WarmupCount=5)
+//   Benchmarks.DistributedSystemScenario_WithFullUniqueItems: Job-LCLOIE(IterationCount=20, IterationTime=200.0000 ms, WarmupCount=5)
+//   Benchmarks.SingleServerScenario_With25PercentDuplicateItem: Job-LCLOIE(IterationCount=20, IterationTime=200.0000 ms, WarmupCount=5)
+//   Benchmarks.DistributedSystemScenario_With25PercentDuplicateItems: Job-LCLOIE(IterationCount=20, IterationTime=200.0000 ms, WarmupCount=5)
+//   Benchmarks.SingleServerScenario_With50PercentDuplicateItems: Job-LCLOIE(IterationCount=20, IterationTime=200.0000 ms, WarmupCount=5)
+//   Benchmarks.DistributedSystemScenario_With50PercentDuplicateItems: Job-LCLOIE(IterationCount=20, IterationTime=200.0000 ms, WarmupCount=5)
+//   Benchmarks.SingleServerScenario_With75PercentDuplicateItems: Job-LCLOIE(IterationCount=20, IterationTime=200.0000 ms, WarmupCount=5)
+//   Benchmarks.DistributedSystemScenario_With75PercentDuplicateItems: Job-LCLOIE(IterationCount=20, IterationTime=200.0000 ms, WarmupCount=5)
+//   Benchmarks.SingleServerScenario_WithFullDuplicateItems: Job-LCLOIE(IterationCount=20, IterationTime=200.0000 ms, WarmupCount=5)
+//   Benchmarks.DistributedSystemScenario_WithFullDuplicateItems: Job-LCLOIE(IterationCount=20, IterationTime=200.0000 ms, WarmupCount=5)
+
+// **************************
+// Benchmark: Benchmarks.SingleServerScenario_WithFullUniqueItems: Job-LCLOIE(IterationCount=20, IterationTime=200.0000 ms, WarmupCount=5)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet af7b1b7f-b1af-47fb-940f-6c7624598c7e.dll --anonymousPipes 143 144 --benchmarkName Integration.Benchmarks.SingleServerScenario_WithFullUniqueItems --job "IterationCount=20, IterationTime=200.0000 ms, WarmupCount=5" --benchmarkId 0 in /Users/huseyin/RiderProjects/AdCreativeAI-IntegrationCase-main/Integration/bin/Release/net7.0/af7b1b7f-b1af-47fb-940f-6c7624598c7e/bin/Release/net7.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 7.0.12 (7.0.1223.47720), Arm64 RyuJIT AdvSIMD
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AdvSIMD,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Job-ZMJIRU(IterationCount=20, IterationTime=200.0000 ms, WarmupCount=5)
+
+OverheadJitting  1: 1 op, 106333.00 ns, 106.3330 us/op
+WorkloadJitting  1: 1 op, 27559156291.00 ns, 27.5592 s/op
+
+WorkloadWarmup   1: 1 op, 58479416.00 ns, 58.4794 ms/op
+WorkloadWarmup   2: 1 op, 59651666.00 ns, 59.6517 ms/op
+WorkloadWarmup   3: 1 op, 58846708.00 ns, 58.8467 ms/op
+WorkloadWarmup   4: 1 op, 60230542.00 ns, 60.2305 ms/op
+WorkloadWarmup   5: 1 op, 58275583.00 ns, 58.2756 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 57271833.00 ns, 57.2718 ms/op
+WorkloadActual   2: 1 op, 57878875.00 ns, 57.8789 ms/op
+WorkloadActual   3: 1 op, 68334083.00 ns, 68.3341 ms/op
+WorkloadActual   4: 1 op, 77600042.00 ns, 77.6000 ms/op
+WorkloadActual   5: 1 op, 77160875.00 ns, 77.1609 ms/op
+WorkloadActual   6: 1 op, 76998375.00 ns, 76.9984 ms/op
+WorkloadActual   7: 1 op, 75264167.00 ns, 75.2642 ms/op
+WorkloadActual   8: 1 op, 60205750.00 ns, 60.2058 ms/op
+WorkloadActual   9: 1 op, 62344167.00 ns, 62.3442 ms/op
+WorkloadActual  10: 1 op, 77211792.00 ns, 77.2118 ms/op
+WorkloadActual  11: 1 op, 73335333.00 ns, 73.3353 ms/op
+WorkloadActual  12: 1 op, 59102625.00 ns, 59.1026 ms/op
+WorkloadActual  13: 1 op, 57147833.00 ns, 57.1478 ms/op
+WorkloadActual  14: 1 op, 57841208.00 ns, 57.8412 ms/op
+WorkloadActual  15: 1 op, 68916333.00 ns, 68.9163 ms/op
+WorkloadActual  16: 1 op, 74872333.00 ns, 74.8723 ms/op
+WorkloadActual  17: 1 op, 76638083.00 ns, 76.6381 ms/op
+WorkloadActual  18: 1 op, 67775167.00 ns, 67.7752 ms/op
+WorkloadActual  19: 1 op, 57631166.00 ns, 57.6312 ms/op
+WorkloadActual  20: 1 op, 57375833.00 ns, 57.3758 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 57271833.00 ns, 57.2718 ms/op
+WorkloadResult   2: 1 op, 57878875.00 ns, 57.8789 ms/op
+WorkloadResult   3: 1 op, 68334083.00 ns, 68.3341 ms/op
+WorkloadResult   4: 1 op, 77600042.00 ns, 77.6000 ms/op
+WorkloadResult   5: 1 op, 77160875.00 ns, 77.1609 ms/op
+WorkloadResult   6: 1 op, 76998375.00 ns, 76.9984 ms/op
+WorkloadResult   7: 1 op, 75264167.00 ns, 75.2642 ms/op
+WorkloadResult   8: 1 op, 60205750.00 ns, 60.2058 ms/op
+WorkloadResult   9: 1 op, 62344167.00 ns, 62.3442 ms/op
+WorkloadResult  10: 1 op, 77211792.00 ns, 77.2118 ms/op
+WorkloadResult  11: 1 op, 73335333.00 ns, 73.3353 ms/op
+WorkloadResult  12: 1 op, 59102625.00 ns, 59.1026 ms/op
+WorkloadResult  13: 1 op, 57147833.00 ns, 57.1478 ms/op
+WorkloadResult  14: 1 op, 57841208.00 ns, 57.8412 ms/op
+WorkloadResult  15: 1 op, 68916333.00 ns, 68.9163 ms/op
+WorkloadResult  16: 1 op, 74872333.00 ns, 74.8723 ms/op
+WorkloadResult  17: 1 op, 76638083.00 ns, 76.6381 ms/op
+WorkloadResult  18: 1 op, 67775167.00 ns, 67.7752 ms/op
+WorkloadResult  19: 1 op, 57631166.00 ns, 57.6312 ms/op
+WorkloadResult  20: 1 op, 57375833.00 ns, 57.3758 ms/op
+
+// AfterAll
+// Benchmark Process 17208 has exited with code 0.
+
+Mean = 67.045 ms, StdErr = 1.891 ms (2.82%), N = 20, StdDev = 8.456 ms
+Min = 57.148 ms, Q1 = 57.869 ms, Median = 68.055 ms, Q3 = 75.608 ms, Max = 77.600 ms
+IQR = 17.738 ms, LowerFence = 31.262 ms, UpperFence = 102.215 ms
+ConfidenceInterval = [59.703 ms; 74.388 ms] (CI 99.9%), Margin = 7.343 ms (10.95% of Mean)
+Skewness = 0.03, Kurtosis = 1.15, MValue = 3.11
+
+// ** Remained 9 (%90,0) benchmark(s) to run. Estimated finish 2024-06-22 15:30 (0h 4m from now) **
+// **************************
+// Benchmark: Benchmarks.DistributedSystemScenario_WithFullUniqueItems: Job-LCLOIE(IterationCount=20, IterationTime=200.0000 ms, WarmupCount=5)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet af7b1b7f-b1af-47fb-940f-6c7624598c7e.dll --anonymousPipes 143 144 --benchmarkName Integration.Benchmarks.DistributedSystemScenario_WithFullUniqueItems --job "IterationCount=20, IterationTime=200.0000 ms, WarmupCount=5" --benchmarkId 1 in /Users/huseyin/RiderProjects/AdCreativeAI-IntegrationCase-main/Integration/bin/Release/net7.0/af7b1b7f-b1af-47fb-940f-6c7624598c7e/bin/Release/net7.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 7.0.12 (7.0.1223.47720), Arm64 RyuJIT AdvSIMD
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AdvSIMD,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Job-IGLYFJ(IterationCount=20, IterationTime=200.0000 ms, WarmupCount=5)
+
+OverheadJitting  1: 1 op, 114292.00 ns, 114.2920 us/op
+WorkloadJitting  1: 1 op, 256212875.00 ns, 256.2129 ms/op
+
+OverheadJitting  2: 1 op, 625.00 ns, 625.0000 ns/op
+WorkloadJitting  2: 1 op, 206125042.00 ns, 206.1250 ms/op
+
+WorkloadWarmup   1: 1 op, 211470583.00 ns, 211.4706 ms/op
+WorkloadWarmup   2: 1 op, 205105875.00 ns, 205.1059 ms/op
+WorkloadWarmup   3: 1 op, 198934750.00 ns, 198.9348 ms/op
+WorkloadWarmup   4: 1 op, 187652750.00 ns, 187.6527 ms/op
+WorkloadWarmup   5: 1 op, 190323917.00 ns, 190.3239 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 197470416.00 ns, 197.4704 ms/op
+WorkloadActual   2: 1 op, 186642917.00 ns, 186.6429 ms/op
+WorkloadActual   3: 1 op, 196562833.00 ns, 196.5628 ms/op
+WorkloadActual   4: 1 op, 183252584.00 ns, 183.2526 ms/op
+WorkloadActual   5: 1 op, 186012708.00 ns, 186.0127 ms/op
+WorkloadActual   6: 1 op, 179729959.00 ns, 179.7300 ms/op
+WorkloadActual   7: 1 op, 180613458.00 ns, 180.6135 ms/op
+WorkloadActual   8: 1 op, 182236792.00 ns, 182.2368 ms/op
+WorkloadActual   9: 1 op, 185874334.00 ns, 185.8743 ms/op
+WorkloadActual  10: 1 op, 182002459.00 ns, 182.0025 ms/op
+WorkloadActual  11: 1 op, 187694500.00 ns, 187.6945 ms/op
+WorkloadActual  12: 1 op, 197486000.00 ns, 197.4860 ms/op
+WorkloadActual  13: 1 op, 189131625.00 ns, 189.1316 ms/op
+WorkloadActual  14: 1 op, 187564333.00 ns, 187.5643 ms/op
+WorkloadActual  15: 1 op, 184615542.00 ns, 184.6155 ms/op
+WorkloadActual  16: 1 op, 182502125.00 ns, 182.5021 ms/op
+WorkloadActual  17: 1 op, 191409917.00 ns, 191.4099 ms/op
+WorkloadActual  18: 1 op, 186642042.00 ns, 186.6420 ms/op
+WorkloadActual  19: 1 op, 178229500.00 ns, 178.2295 ms/op
+WorkloadActual  20: 1 op, 181612833.00 ns, 181.6128 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 186642917.00 ns, 186.6429 ms/op
+WorkloadResult   2: 1 op, 196562833.00 ns, 196.5628 ms/op
+WorkloadResult   3: 1 op, 183252584.00 ns, 183.2526 ms/op
+WorkloadResult   4: 1 op, 186012708.00 ns, 186.0127 ms/op
+WorkloadResult   5: 1 op, 179729959.00 ns, 179.7300 ms/op
+WorkloadResult   6: 1 op, 180613458.00 ns, 180.6135 ms/op
+WorkloadResult   7: 1 op, 182236792.00 ns, 182.2368 ms/op
+WorkloadResult   8: 1 op, 185874334.00 ns, 185.8743 ms/op
+WorkloadResult   9: 1 op, 182002459.00 ns, 182.0025 ms/op
+WorkloadResult  10: 1 op, 187694500.00 ns, 187.6945 ms/op
+WorkloadResult  11: 1 op, 189131625.00 ns, 189.1316 ms/op
+WorkloadResult  12: 1 op, 187564333.00 ns, 187.5643 ms/op
+WorkloadResult  13: 1 op, 184615542.00 ns, 184.6155 ms/op
+WorkloadResult  14: 1 op, 182502125.00 ns, 182.5021 ms/op
+WorkloadResult  15: 1 op, 191409917.00 ns, 191.4099 ms/op
+WorkloadResult  16: 1 op, 186642042.00 ns, 186.6420 ms/op
+WorkloadResult  17: 1 op, 178229500.00 ns, 178.2295 ms/op
+WorkloadResult  18: 1 op, 181612833.00 ns, 181.6128 ms/op
+
+// AfterAll
+// Benchmark Process 17225 has exited with code 0.
+
+Mean = 185.129 ms, StdErr = 1.059 ms (0.57%), N = 18, StdDev = 4.492 ms
+Min = 178.230 ms, Q1 = 182.061 ms, Median = 185.245 ms, Q3 = 187.334 ms, Max = 196.563 ms
+IQR = 5.273 ms, LowerFence = 174.152 ms, UpperFence = 195.243 ms
+ConfidenceInterval = [180.932 ms; 189.327 ms] (CI 99.9%), Margin = 4.198 ms (2.27% of Mean)
+Skewness = 0.7, Kurtosis = 3.13, MValue = 2
+
+// ** Remained 8 (%80,0) benchmark(s) to run. Estimated finish 2024-06-22 15:28 (0h 2m from now) **
+// **************************
+// Benchmark: Benchmarks.SingleServerScenario_With25PercentDuplicateItem: Job-LCLOIE(IterationCount=20, IterationTime=200.0000 ms, WarmupCount=5)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet af7b1b7f-b1af-47fb-940f-6c7624598c7e.dll --anonymousPipes 143 144 --benchmarkName Integration.Benchmarks.SingleServerScenario_With25PercentDuplicateItem --job "IterationCount=20, IterationTime=200.0000 ms, WarmupCount=5" --benchmarkId 2 in /Users/huseyin/RiderProjects/AdCreativeAI-IntegrationCase-main/Integration/bin/Release/net7.0/af7b1b7f-b1af-47fb-940f-6c7624598c7e/bin/Release/net7.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 7.0.12 (7.0.1223.47720), Arm64 RyuJIT AdvSIMD
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AdvSIMD,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Job-BFGUDY(IterationCount=20, IterationTime=200.0000 ms, WarmupCount=5)
+
+OverheadJitting  1: 1 op, 106334.00 ns, 106.3340 us/op
+WorkloadJitting  1: 1 op, 16069005584.00 ns, 16.0690 s/op
+
+WorkloadWarmup   1: 1 op, 45210750.00 ns, 45.2107 ms/op
+WorkloadWarmup   2: 1 op, 47750584.00 ns, 47.7506 ms/op
+WorkloadWarmup   3: 1 op, 43195541.00 ns, 43.1955 ms/op
+WorkloadWarmup   4: 1 op, 43564041.00 ns, 43.5640 ms/op
+WorkloadWarmup   5: 1 op, 42314666.00 ns, 42.3147 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 43125291.00 ns, 43.1253 ms/op
+WorkloadActual   2: 1 op, 42427834.00 ns, 42.4278 ms/op
+WorkloadActual   3: 1 op, 42867875.00 ns, 42.8679 ms/op
+WorkloadActual   4: 1 op, 41971125.00 ns, 41.9711 ms/op
+WorkloadActual   5: 1 op, 42264458.00 ns, 42.2645 ms/op
+WorkloadActual   6: 1 op, 44699209.00 ns, 44.6992 ms/op
+WorkloadActual   7: 1 op, 53308334.00 ns, 53.3083 ms/op
+WorkloadActual   8: 1 op, 54453625.00 ns, 54.4536 ms/op
+WorkloadActual   9: 1 op, 55868834.00 ns, 55.8688 ms/op
+WorkloadActual  10: 1 op, 55704666.00 ns, 55.7047 ms/op
+WorkloadActual  11: 1 op, 65729209.00 ns, 65.7292 ms/op
+WorkloadActual  12: 1 op, 42451417.00 ns, 42.4514 ms/op
+WorkloadActual  13: 1 op, 41680083.00 ns, 41.6801 ms/op
+WorkloadActual  14: 1 op, 41886166.00 ns, 41.8862 ms/op
+WorkloadActual  15: 1 op, 41369541.00 ns, 41.3695 ms/op
+WorkloadActual  16: 1 op, 40952708.00 ns, 40.9527 ms/op
+WorkloadActual  17: 1 op, 40464541.00 ns, 40.4645 ms/op
+WorkloadActual  18: 1 op, 41253709.00 ns, 41.2537 ms/op
+WorkloadActual  19: 1 op, 41696125.00 ns, 41.6961 ms/op
+WorkloadActual  20: 1 op, 51398416.00 ns, 51.3984 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 43125291.00 ns, 43.1253 ms/op
+WorkloadResult   2: 1 op, 42427834.00 ns, 42.4278 ms/op
+WorkloadResult   3: 1 op, 42867875.00 ns, 42.8679 ms/op
+WorkloadResult   4: 1 op, 41971125.00 ns, 41.9711 ms/op
+WorkloadResult   5: 1 op, 42264458.00 ns, 42.2645 ms/op
+WorkloadResult   6: 1 op, 44699209.00 ns, 44.6992 ms/op
+WorkloadResult   7: 1 op, 53308334.00 ns, 53.3083 ms/op
+WorkloadResult   8: 1 op, 54453625.00 ns, 54.4536 ms/op
+WorkloadResult   9: 1 op, 55868834.00 ns, 55.8688 ms/op
+WorkloadResult  10: 1 op, 55704666.00 ns, 55.7047 ms/op
+WorkloadResult  11: 1 op, 65729209.00 ns, 65.7292 ms/op
+WorkloadResult  12: 1 op, 42451417.00 ns, 42.4514 ms/op
+WorkloadResult  13: 1 op, 41680083.00 ns, 41.6801 ms/op
+WorkloadResult  14: 1 op, 41886166.00 ns, 41.8862 ms/op
+WorkloadResult  15: 1 op, 41369541.00 ns, 41.3695 ms/op
+WorkloadResult  16: 1 op, 40952708.00 ns, 40.9527 ms/op
+WorkloadResult  17: 1 op, 40464541.00 ns, 40.4645 ms/op
+WorkloadResult  18: 1 op, 41253709.00 ns, 41.2537 ms/op
+WorkloadResult  19: 1 op, 41696125.00 ns, 41.6961 ms/op
+WorkloadResult  20: 1 op, 51398416.00 ns, 51.3984 ms/op
+
+// AfterAll
+// Benchmark Process 17227 has exited with code 0.
+
+Mean = 46.279 ms, StdErr = 1.592 ms (3.44%), N = 20, StdDev = 7.118 ms
+Min = 40.465 ms, Q1 = 41.692 ms, Median = 42.440 ms, Q3 = 51.876 ms, Max = 65.729 ms
+IQR = 10.184 ms, LowerFence = 26.416 ms, UpperFence = 67.152 ms
+ConfidenceInterval = [40.097 ms; 52.460 ms] (CI 99.9%), Margin = 6.181 ms (13.36% of Mean)
+Skewness = 1.23, Kurtosis = 3.36, MValue = 2.86
+
+// ** Remained 7 (%70,0) benchmark(s) to run. Estimated finish 2024-06-22 15:28 (0h 2m from now) **
+// **************************
+// Benchmark: Benchmarks.DistributedSystemScenario_With25PercentDuplicateItems: Job-LCLOIE(IterationCount=20, IterationTime=200.0000 ms, WarmupCount=5)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet af7b1b7f-b1af-47fb-940f-6c7624598c7e.dll --anonymousPipes 143 144 --benchmarkName Integration.Benchmarks.DistributedSystemScenario_With25PercentDuplicateItems --job "IterationCount=20, IterationTime=200.0000 ms, WarmupCount=5" --benchmarkId 3 in /Users/huseyin/RiderProjects/AdCreativeAI-IntegrationCase-main/Integration/bin/Release/net7.0/af7b1b7f-b1af-47fb-940f-6c7624598c7e/bin/Release/net7.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 7.0.12 (7.0.1223.47720), Arm64 RyuJIT AdvSIMD
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AdvSIMD,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Job-IFASLY(IterationCount=20, IterationTime=200.0000 ms, WarmupCount=5)
+
+OverheadJitting  1: 1 op, 1034375.00 ns, 1.0344 ms/op
+WorkloadJitting  1: 1 op, 229363917.00 ns, 229.3639 ms/op
+
+OverheadJitting  2: 1 op, 292.00 ns, 292.0000 ns/op
+WorkloadJitting  2: 1 op, 210596875.00 ns, 210.5969 ms/op
+
+WorkloadWarmup   1: 1 op, 190050375.00 ns, 190.0504 ms/op
+WorkloadWarmup   2: 1 op, 197017542.00 ns, 197.0175 ms/op
+WorkloadWarmup   3: 1 op, 195057666.00 ns, 195.0577 ms/op
+WorkloadWarmup   4: 1 op, 193006167.00 ns, 193.0062 ms/op
+WorkloadWarmup   5: 1 op, 189649666.00 ns, 189.6497 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 199394334.00 ns, 199.3943 ms/op
+WorkloadActual   2: 1 op, 194315709.00 ns, 194.3157 ms/op
+WorkloadActual   3: 1 op, 193076417.00 ns, 193.0764 ms/op
+WorkloadActual   4: 1 op, 196511625.00 ns, 196.5116 ms/op
+WorkloadActual   5: 1 op, 187310875.00 ns, 187.3109 ms/op
+WorkloadActual   6: 1 op, 192570291.00 ns, 192.5703 ms/op
+WorkloadActual   7: 1 op, 197945125.00 ns, 197.9451 ms/op
+WorkloadActual   8: 1 op, 197214083.00 ns, 197.2141 ms/op
+WorkloadActual   9: 1 op, 194393625.00 ns, 194.3936 ms/op
+WorkloadActual  10: 1 op, 187453625.00 ns, 187.4536 ms/op
+WorkloadActual  11: 1 op, 191414583.00 ns, 191.4146 ms/op
+WorkloadActual  12: 1 op, 192792416.00 ns, 192.7924 ms/op
+WorkloadActual  13: 1 op, 195073500.00 ns, 195.0735 ms/op
+WorkloadActual  14: 1 op, 198813417.00 ns, 198.8134 ms/op
+WorkloadActual  15: 1 op, 194615458.00 ns, 194.6155 ms/op
+WorkloadActual  16: 1 op, 182956583.00 ns, 182.9566 ms/op
+WorkloadActual  17: 1 op, 181440542.00 ns, 181.4405 ms/op
+WorkloadActual  18: 1 op, 190684042.00 ns, 190.6840 ms/op
+WorkloadActual  19: 1 op, 182350583.00 ns, 182.3506 ms/op
+WorkloadActual  20: 1 op, 199576000.00 ns, 199.5760 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 199394334.00 ns, 199.3943 ms/op
+WorkloadResult   2: 1 op, 194315709.00 ns, 194.3157 ms/op
+WorkloadResult   3: 1 op, 193076417.00 ns, 193.0764 ms/op
+WorkloadResult   4: 1 op, 196511625.00 ns, 196.5116 ms/op
+WorkloadResult   5: 1 op, 187310875.00 ns, 187.3109 ms/op
+WorkloadResult   6: 1 op, 192570291.00 ns, 192.5703 ms/op
+WorkloadResult   7: 1 op, 197945125.00 ns, 197.9451 ms/op
+WorkloadResult   8: 1 op, 197214083.00 ns, 197.2141 ms/op
+WorkloadResult   9: 1 op, 194393625.00 ns, 194.3936 ms/op
+WorkloadResult  10: 1 op, 187453625.00 ns, 187.4536 ms/op
+WorkloadResult  11: 1 op, 191414583.00 ns, 191.4146 ms/op
+WorkloadResult  12: 1 op, 192792416.00 ns, 192.7924 ms/op
+WorkloadResult  13: 1 op, 195073500.00 ns, 195.0735 ms/op
+WorkloadResult  14: 1 op, 198813417.00 ns, 198.8134 ms/op
+WorkloadResult  15: 1 op, 194615458.00 ns, 194.6155 ms/op
+WorkloadResult  16: 1 op, 182956583.00 ns, 182.9566 ms/op
+WorkloadResult  17: 1 op, 181440542.00 ns, 181.4405 ms/op
+WorkloadResult  18: 1 op, 190684042.00 ns, 190.6840 ms/op
+WorkloadResult  19: 1 op, 182350583.00 ns, 182.3506 ms/op
+WorkloadResult  20: 1 op, 199576000.00 ns, 199.5760 ms/op
+
+// AfterAll
+// Benchmark Process 17231 has exited with code 0.
+
+Mean = 192.495 ms, StdErr = 1.254 ms (0.65%), N = 20, StdDev = 5.606 ms
+Min = 181.441 ms, Q1 = 189.876 ms, Median = 193.696 ms, Q3 = 196.687 ms, Max = 199.576 ms
+IQR = 6.811 ms, LowerFence = 179.660 ms, UpperFence = 206.903 ms
+ConfidenceInterval = [187.627 ms; 197.363 ms] (CI 99.9%), Margin = 4.868 ms (2.53% of Mean)
+Skewness = -0.63, Kurtosis = 2.19, MValue = 2
+
+// ** Remained 6 (%60,0) benchmark(s) to run. Estimated finish 2024-06-22 15:27 (0h 1m from now) **
+// **************************
+// Benchmark: Benchmarks.SingleServerScenario_With50PercentDuplicateItems: Job-LCLOIE(IterationCount=20, IterationTime=200.0000 ms, WarmupCount=5)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet af7b1b7f-b1af-47fb-940f-6c7624598c7e.dll --anonymousPipes 143 144 --benchmarkName Integration.Benchmarks.SingleServerScenario_With50PercentDuplicateItems --job "IterationCount=20, IterationTime=200.0000 ms, WarmupCount=5" --benchmarkId 4 in /Users/huseyin/RiderProjects/AdCreativeAI-IntegrationCase-main/Integration/bin/Release/net7.0/af7b1b7f-b1af-47fb-940f-6c7624598c7e/bin/Release/net7.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 7.0.12 (7.0.1223.47720), Arm64 RyuJIT AdvSIMD
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AdvSIMD,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Job-UFREDC(IterationCount=20, IterationTime=200.0000 ms, WarmupCount=5)
+
+OverheadJitting  1: 1 op, 118750.00 ns, 118.7500 us/op
+WorkloadJitting  1: 1 op, 12057874167.00 ns, 12.0579 s/op
+
+WorkloadWarmup   1: 1 op, 41409333.00 ns, 41.4093 ms/op
+WorkloadWarmup   2: 1 op, 41044834.00 ns, 41.0448 ms/op
+WorkloadWarmup   3: 1 op, 43450959.00 ns, 43.4510 ms/op
+WorkloadWarmup   4: 1 op, 41939792.00 ns, 41.9398 ms/op
+WorkloadWarmup   5: 1 op, 40904167.00 ns, 40.9042 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 41299708.00 ns, 41.2997 ms/op
+WorkloadActual   2: 1 op, 40313833.00 ns, 40.3138 ms/op
+WorkloadActual   3: 1 op, 40078667.00 ns, 40.0787 ms/op
+WorkloadActual   4: 1 op, 39790167.00 ns, 39.7902 ms/op
+WorkloadActual   5: 1 op, 38700459.00 ns, 38.7005 ms/op
+WorkloadActual   6: 1 op, 39703708.00 ns, 39.7037 ms/op
+WorkloadActual   7: 1 op, 39005875.00 ns, 39.0059 ms/op
+WorkloadActual   8: 1 op, 43923458.00 ns, 43.9235 ms/op
+WorkloadActual   9: 1 op, 42585500.00 ns, 42.5855 ms/op
+WorkloadActual  10: 1 op, 42642375.00 ns, 42.6424 ms/op
+WorkloadActual  11: 1 op, 43583875.00 ns, 43.5839 ms/op
+WorkloadActual  12: 1 op, 42123750.00 ns, 42.1238 ms/op
+WorkloadActual  13: 1 op, 42425542.00 ns, 42.4255 ms/op
+WorkloadActual  14: 1 op, 42401792.00 ns, 42.4018 ms/op
+WorkloadActual  15: 1 op, 42389500.00 ns, 42.3895 ms/op
+WorkloadActual  16: 1 op, 43591625.00 ns, 43.5916 ms/op
+WorkloadActual  17: 1 op, 51279708.00 ns, 51.2797 ms/op
+WorkloadActual  18: 1 op, 50150708.00 ns, 50.1507 ms/op
+WorkloadActual  19: 1 op, 50959208.00 ns, 50.9592 ms/op
+WorkloadActual  20: 1 op, 50121208.00 ns, 50.1212 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 41299708.00 ns, 41.2997 ms/op
+WorkloadResult   2: 1 op, 40313833.00 ns, 40.3138 ms/op
+WorkloadResult   3: 1 op, 40078667.00 ns, 40.0787 ms/op
+WorkloadResult   4: 1 op, 39790167.00 ns, 39.7902 ms/op
+WorkloadResult   5: 1 op, 38700459.00 ns, 38.7005 ms/op
+WorkloadResult   6: 1 op, 39703708.00 ns, 39.7037 ms/op
+WorkloadResult   7: 1 op, 39005875.00 ns, 39.0059 ms/op
+WorkloadResult   8: 1 op, 43923458.00 ns, 43.9235 ms/op
+WorkloadResult   9: 1 op, 42585500.00 ns, 42.5855 ms/op
+WorkloadResult  10: 1 op, 42642375.00 ns, 42.6424 ms/op
+WorkloadResult  11: 1 op, 43583875.00 ns, 43.5839 ms/op
+WorkloadResult  12: 1 op, 42123750.00 ns, 42.1238 ms/op
+WorkloadResult  13: 1 op, 42425542.00 ns, 42.4255 ms/op
+WorkloadResult  14: 1 op, 42401792.00 ns, 42.4018 ms/op
+WorkloadResult  15: 1 op, 42389500.00 ns, 42.3895 ms/op
+WorkloadResult  16: 1 op, 43591625.00 ns, 43.5916 ms/op
+
+// AfterAll
+// Benchmark Process 17232 has exited with code 0.
+
+Mean = 41.535 ms, StdErr = 0.426 ms (1.03%), N = 16, StdDev = 1.705 ms
+Min = 38.700 ms, Q1 = 40.007 ms, Median = 42.257 ms, Q3 = 42.600 ms, Max = 43.923 ms
+IQR = 2.593 ms, LowerFence = 36.117 ms, UpperFence = 46.489 ms
+ConfidenceInterval = [39.799 ms; 43.271 ms] (CI 99.9%), Margin = 1.736 ms (4.18% of Mean)
+Skewness = -0.25, Kurtosis = 1.52, MValue = 3.25
+
+// ** Remained 5 (%50,0) benchmark(s) to run. Estimated finish 2024-06-22 15:27 (0h 1m from now) **
+// **************************
+// Benchmark: Benchmarks.DistributedSystemScenario_With50PercentDuplicateItems: Job-LCLOIE(IterationCount=20, IterationTime=200.0000 ms, WarmupCount=5)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet af7b1b7f-b1af-47fb-940f-6c7624598c7e.dll --anonymousPipes 143 144 --benchmarkName Integration.Benchmarks.DistributedSystemScenario_With50PercentDuplicateItems --job "IterationCount=20, IterationTime=200.0000 ms, WarmupCount=5" --benchmarkId 5 in /Users/huseyin/RiderProjects/AdCreativeAI-IntegrationCase-main/Integration/bin/Release/net7.0/af7b1b7f-b1af-47fb-940f-6c7624598c7e/bin/Release/net7.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 7.0.12 (7.0.1223.47720), Arm64 RyuJIT AdvSIMD
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AdvSIMD,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Job-ENGCPH(IterationCount=20, IterationTime=200.0000 ms, WarmupCount=5)
+
+OverheadJitting  1: 1 op, 116750.00 ns, 116.7500 us/op
+WorkloadJitting  1: 1 op, 236971500.00 ns, 236.9715 ms/op
+
+OverheadJitting  2: 1 op, 250.00 ns, 250.0000 ns/op
+WorkloadJitting  2: 1 op, 210542583.00 ns, 210.5426 ms/op
+
+WorkloadWarmup   1: 1 op, 213717792.00 ns, 213.7178 ms/op
+WorkloadWarmup   2: 1 op, 206340333.00 ns, 206.3403 ms/op
+WorkloadWarmup   3: 1 op, 199662708.00 ns, 199.6627 ms/op
+WorkloadWarmup   4: 1 op, 192854166.00 ns, 192.8542 ms/op
+WorkloadWarmup   5: 1 op, 179900291.00 ns, 179.9003 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 187864834.00 ns, 187.8648 ms/op
+WorkloadActual   2: 1 op, 198252917.00 ns, 198.2529 ms/op
+WorkloadActual   3: 1 op, 183691459.00 ns, 183.6915 ms/op
+WorkloadActual   4: 1 op, 184313416.00 ns, 184.3134 ms/op
+WorkloadActual   5: 1 op, 186072708.00 ns, 186.0727 ms/op
+WorkloadActual   6: 1 op, 189839375.00 ns, 189.8394 ms/op
+WorkloadActual   7: 1 op, 183458750.00 ns, 183.4588 ms/op
+WorkloadActual   8: 1 op, 191299084.00 ns, 191.2991 ms/op
+WorkloadActual   9: 1 op, 184730209.00 ns, 184.7302 ms/op
+WorkloadActual  10: 1 op, 189237084.00 ns, 189.2371 ms/op
+WorkloadActual  11: 1 op, 183054292.00 ns, 183.0543 ms/op
+WorkloadActual  12: 1 op, 186397542.00 ns, 186.3975 ms/op
+WorkloadActual  13: 1 op, 190258416.00 ns, 190.2584 ms/op
+WorkloadActual  14: 1 op, 188111916.00 ns, 188.1119 ms/op
+WorkloadActual  15: 1 op, 192107959.00 ns, 192.1080 ms/op
+WorkloadActual  16: 1 op, 185487125.00 ns, 185.4871 ms/op
+WorkloadActual  17: 1 op, 181303459.00 ns, 181.3035 ms/op
+WorkloadActual  18: 1 op, 187264834.00 ns, 187.2648 ms/op
+WorkloadActual  19: 1 op, 184799292.00 ns, 184.7993 ms/op
+WorkloadActual  20: 1 op, 182541167.00 ns, 182.5412 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 187864834.00 ns, 187.8648 ms/op
+WorkloadResult   2: 1 op, 183691459.00 ns, 183.6915 ms/op
+WorkloadResult   3: 1 op, 184313416.00 ns, 184.3134 ms/op
+WorkloadResult   4: 1 op, 186072708.00 ns, 186.0727 ms/op
+WorkloadResult   5: 1 op, 189839375.00 ns, 189.8394 ms/op
+WorkloadResult   6: 1 op, 183458750.00 ns, 183.4588 ms/op
+WorkloadResult   7: 1 op, 191299084.00 ns, 191.2991 ms/op
+WorkloadResult   8: 1 op, 184730209.00 ns, 184.7302 ms/op
+WorkloadResult   9: 1 op, 189237084.00 ns, 189.2371 ms/op
+WorkloadResult  10: 1 op, 183054292.00 ns, 183.0543 ms/op
+WorkloadResult  11: 1 op, 186397542.00 ns, 186.3975 ms/op
+WorkloadResult  12: 1 op, 190258416.00 ns, 190.2584 ms/op
+WorkloadResult  13: 1 op, 188111916.00 ns, 188.1119 ms/op
+WorkloadResult  14: 1 op, 192107959.00 ns, 192.1080 ms/op
+WorkloadResult  15: 1 op, 185487125.00 ns, 185.4871 ms/op
+WorkloadResult  16: 1 op, 181303459.00 ns, 181.3035 ms/op
+WorkloadResult  17: 1 op, 187264834.00 ns, 187.2648 ms/op
+WorkloadResult  18: 1 op, 184799292.00 ns, 184.7993 ms/op
+WorkloadResult  19: 1 op, 182541167.00 ns, 182.5412 ms/op
+
+// AfterAll
+// Benchmark Process 17235 has exited with code 0.
+
+Mean = 186.412 ms, StdErr = 0.717 ms (0.38%), N = 19, StdDev = 3.126 ms
+Min = 181.303 ms, Q1 = 184.002 ms, Median = 186.073 ms, Q3 = 188.674 ms, Max = 192.108 ms
+IQR = 4.672 ms, LowerFence = 176.994 ms, UpperFence = 195.683 ms
+ConfidenceInterval = [183.600 ms; 189.224 ms] (CI 99.9%), Margin = 2.812 ms (1.51% of Mean)
+Skewness = 0.23, Kurtosis = 1.79, MValue = 2
+
+// ** Remained 4 (%40,0) benchmark(s) to run. Estimated finish 2024-06-22 15:27 (0h 0m from now) **
+// **************************
+// Benchmark: Benchmarks.SingleServerScenario_With75PercentDuplicateItems: Job-LCLOIE(IterationCount=20, IterationTime=200.0000 ms, WarmupCount=5)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet af7b1b7f-b1af-47fb-940f-6c7624598c7e.dll --anonymousPipes 143 144 --benchmarkName Integration.Benchmarks.SingleServerScenario_With75PercentDuplicateItems --job "IterationCount=20, IterationTime=200.0000 ms, WarmupCount=5" --benchmarkId 6 in /Users/huseyin/RiderProjects/AdCreativeAI-IntegrationCase-main/Integration/bin/Release/net7.0/af7b1b7f-b1af-47fb-940f-6c7624598c7e/bin/Release/net7.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 7.0.12 (7.0.1223.47720), Arm64 RyuJIT AdvSIMD
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AdvSIMD,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Job-TILZCI(IterationCount=20, IterationTime=200.0000 ms, WarmupCount=5)
+
+OverheadJitting  1: 1 op, 106375.00 ns, 106.3750 us/op
+WorkloadJitting  1: 1 op, 8011969416.00 ns, 8.0120 s/op
+
+OverheadJitting  2: 1 op, 209.00 ns, 209.0000 ns/op
+WorkloadJitting  2: 1 op, 38881708.00 ns, 38.8817 ms/op
+
+WorkloadPilot    1: 4 op, 151421792.00 ns, 37.8554 ms/op
+
+WorkloadWarmup   1: 4 op, 154168792.00 ns, 38.5422 ms/op
+WorkloadWarmup   2: 4 op, 157920666.00 ns, 39.4802 ms/op
+WorkloadWarmup   3: 4 op, 155109125.00 ns, 38.7773 ms/op
+WorkloadWarmup   4: 4 op, 147474291.00 ns, 36.8686 ms/op
+WorkloadWarmup   5: 4 op, 143208084.00 ns, 35.8020 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 4 op, 138832333.00 ns, 34.7081 ms/op
+WorkloadActual   2: 4 op, 162630541.00 ns, 40.6576 ms/op
+WorkloadActual   3: 4 op, 140427042.00 ns, 35.1068 ms/op
+WorkloadActual   4: 4 op, 139165083.00 ns, 34.7913 ms/op
+WorkloadActual   5: 4 op, 134473459.00 ns, 33.6184 ms/op
+WorkloadActual   6: 4 op, 129604458.00 ns, 32.4011 ms/op
+WorkloadActual   7: 4 op, 135191166.00 ns, 33.7978 ms/op
+WorkloadActual   8: 4 op, 134011208.00 ns, 33.5028 ms/op
+WorkloadActual   9: 4 op, 141979417.00 ns, 35.4949 ms/op
+WorkloadActual  10: 4 op, 139078833.00 ns, 34.7697 ms/op
+WorkloadActual  11: 4 op, 141995166.00 ns, 35.4988 ms/op
+WorkloadActual  12: 4 op, 138997417.00 ns, 34.7494 ms/op
+WorkloadActual  13: 4 op, 139612125.00 ns, 34.9030 ms/op
+WorkloadActual  14: 4 op, 144201083.00 ns, 36.0503 ms/op
+WorkloadActual  15: 4 op, 181629583.00 ns, 45.4074 ms/op
+WorkloadActual  16: 4 op, 135480833.00 ns, 33.8702 ms/op
+WorkloadActual  17: 4 op, 151495375.00 ns, 37.8738 ms/op
+WorkloadActual  18: 4 op, 148591667.00 ns, 37.1479 ms/op
+WorkloadActual  19: 4 op, 143950167.00 ns, 35.9875 ms/op
+WorkloadActual  20: 4 op, 146411917.00 ns, 36.6030 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 4 op, 138832333.00 ns, 34.7081 ms/op
+WorkloadResult   2: 4 op, 140427042.00 ns, 35.1068 ms/op
+WorkloadResult   3: 4 op, 139165083.00 ns, 34.7913 ms/op
+WorkloadResult   4: 4 op, 134473459.00 ns, 33.6184 ms/op
+WorkloadResult   5: 4 op, 129604458.00 ns, 32.4011 ms/op
+WorkloadResult   6: 4 op, 135191166.00 ns, 33.7978 ms/op
+WorkloadResult   7: 4 op, 134011208.00 ns, 33.5028 ms/op
+WorkloadResult   8: 4 op, 141979417.00 ns, 35.4949 ms/op
+WorkloadResult   9: 4 op, 139078833.00 ns, 34.7697 ms/op
+WorkloadResult  10: 4 op, 141995166.00 ns, 35.4988 ms/op
+WorkloadResult  11: 4 op, 138997417.00 ns, 34.7494 ms/op
+WorkloadResult  12: 4 op, 139612125.00 ns, 34.9030 ms/op
+WorkloadResult  13: 4 op, 144201083.00 ns, 36.0503 ms/op
+WorkloadResult  14: 4 op, 135480833.00 ns, 33.8702 ms/op
+WorkloadResult  15: 4 op, 151495375.00 ns, 37.8738 ms/op
+WorkloadResult  16: 4 op, 148591667.00 ns, 37.1479 ms/op
+WorkloadResult  17: 4 op, 143950167.00 ns, 35.9875 ms/op
+WorkloadResult  18: 4 op, 146411917.00 ns, 36.6030 ms/op
+
+// AfterAll
+// Benchmark Process 17237 has exited with code 0.
+
+Mean = 35.049 ms, StdErr = 0.323 ms (0.92%), N = 18, StdDev = 1.369 ms
+Min = 32.401 ms, Q1 = 34.080 ms, Median = 34.847 ms, Q3 = 35.865 ms, Max = 37.874 ms
+IQR = 1.786 ms, LowerFence = 31.401 ms, UpperFence = 38.544 ms
+ConfidenceInterval = [33.769 ms; 36.328 ms] (CI 99.9%), Margin = 1.280 ms (3.65% of Mean)
+Skewness = 0.19, Kurtosis = 2.44, MValue = 2
+
+// ** Remained 3 (%30,0) benchmark(s) to run. Estimated finish 2024-06-22 15:27 (0h 0m from now) **
+// **************************
+// Benchmark: Benchmarks.DistributedSystemScenario_With75PercentDuplicateItems: Job-LCLOIE(IterationCount=20, IterationTime=200.0000 ms, WarmupCount=5)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet af7b1b7f-b1af-47fb-940f-6c7624598c7e.dll --anonymousPipes 143 144 --benchmarkName Integration.Benchmarks.DistributedSystemScenario_With75PercentDuplicateItems --job "IterationCount=20, IterationTime=200.0000 ms, WarmupCount=5" --benchmarkId 7 in /Users/huseyin/RiderProjects/AdCreativeAI-IntegrationCase-main/Integration/bin/Release/net7.0/af7b1b7f-b1af-47fb-940f-6c7624598c7e/bin/Release/net7.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 7.0.12 (7.0.1223.47720), Arm64 RyuJIT AdvSIMD
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AdvSIMD,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Job-HFOMRO(IterationCount=20, IterationTime=200.0000 ms, WarmupCount=5)
+
+OverheadJitting  1: 1 op, 112333.00 ns, 112.3330 us/op
+WorkloadJitting  1: 1 op, 246104750.00 ns, 246.1047 ms/op
+
+OverheadJitting  2: 1 op, 167.00 ns, 167.0000 ns/op
+WorkloadJitting  2: 1 op, 204285333.00 ns, 204.2853 ms/op
+
+WorkloadWarmup   1: 1 op, 189266458.00 ns, 189.2665 ms/op
+WorkloadWarmup   2: 1 op, 196366750.00 ns, 196.3667 ms/op
+WorkloadWarmup   3: 1 op, 179483542.00 ns, 179.4835 ms/op
+WorkloadWarmup   4: 1 op, 178662375.00 ns, 178.6624 ms/op
+WorkloadWarmup   5: 1 op, 195454458.00 ns, 195.4545 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 198081250.00 ns, 198.0813 ms/op
+WorkloadActual   2: 1 op, 217376500.00 ns, 217.3765 ms/op
+WorkloadActual   3: 1 op, 206265041.00 ns, 206.2650 ms/op
+WorkloadActual   4: 1 op, 179541792.00 ns, 179.5418 ms/op
+WorkloadActual   5: 1 op, 193715792.00 ns, 193.7158 ms/op
+WorkloadActual   6: 1 op, 186861708.00 ns, 186.8617 ms/op
+WorkloadActual   7: 1 op, 193403292.00 ns, 193.4033 ms/op
+WorkloadActual   8: 1 op, 188292083.00 ns, 188.2921 ms/op
+WorkloadActual   9: 1 op, 184040291.00 ns, 184.0403 ms/op
+WorkloadActual  10: 1 op, 195066459.00 ns, 195.0665 ms/op
+WorkloadActual  11: 1 op, 186621958.00 ns, 186.6220 ms/op
+WorkloadActual  12: 1 op, 187340625.00 ns, 187.3406 ms/op
+WorkloadActual  13: 1 op, 190382125.00 ns, 190.3821 ms/op
+WorkloadActual  14: 1 op, 185964666.00 ns, 185.9647 ms/op
+WorkloadActual  15: 1 op, 186324833.00 ns, 186.3248 ms/op
+WorkloadActual  16: 1 op, 191551625.00 ns, 191.5516 ms/op
+WorkloadActual  17: 1 op, 187518667.00 ns, 187.5187 ms/op
+WorkloadActual  18: 1 op, 182545000.00 ns, 182.5450 ms/op
+WorkloadActual  19: 1 op, 179451584.00 ns, 179.4516 ms/op
+WorkloadActual  20: 1 op, 190765833.00 ns, 190.7658 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 198081250.00 ns, 198.0813 ms/op
+WorkloadResult   2: 1 op, 179541792.00 ns, 179.5418 ms/op
+WorkloadResult   3: 1 op, 193715792.00 ns, 193.7158 ms/op
+WorkloadResult   4: 1 op, 186861708.00 ns, 186.8617 ms/op
+WorkloadResult   5: 1 op, 193403292.00 ns, 193.4033 ms/op
+WorkloadResult   6: 1 op, 188292083.00 ns, 188.2921 ms/op
+WorkloadResult   7: 1 op, 184040291.00 ns, 184.0403 ms/op
+WorkloadResult   8: 1 op, 195066459.00 ns, 195.0665 ms/op
+WorkloadResult   9: 1 op, 186621958.00 ns, 186.6220 ms/op
+WorkloadResult  10: 1 op, 187340625.00 ns, 187.3406 ms/op
+WorkloadResult  11: 1 op, 190382125.00 ns, 190.3821 ms/op
+WorkloadResult  12: 1 op, 185964666.00 ns, 185.9647 ms/op
+WorkloadResult  13: 1 op, 186324833.00 ns, 186.3248 ms/op
+WorkloadResult  14: 1 op, 191551625.00 ns, 191.5516 ms/op
+WorkloadResult  15: 1 op, 187518667.00 ns, 187.5187 ms/op
+WorkloadResult  16: 1 op, 182545000.00 ns, 182.5450 ms/op
+WorkloadResult  17: 1 op, 179451584.00 ns, 179.4516 ms/op
+WorkloadResult  18: 1 op, 190765833.00 ns, 190.7658 ms/op
+
+// AfterAll
+// Benchmark Process 17244 has exited with code 0.
+
+Mean = 188.193 ms, StdErr = 1.199 ms (0.64%), N = 18, StdDev = 5.085 ms
+Min = 179.452 ms, Q1 = 186.055 ms, Median = 187.430 ms, Q3 = 191.355 ms, Max = 198.081 ms
+IQR = 5.300 ms, LowerFence = 178.104 ms, UpperFence = 199.306 ms
+ConfidenceInterval = [183.440 ms; 192.946 ms] (CI 99.9%), Margin = 4.753 ms (2.53% of Mean)
+Skewness = 0.03, Kurtosis = 2.2, MValue = 2
+
+// ** Remained 2 (%20,0) benchmark(s) to run. Estimated finish 2024-06-22 15:27 (0h 0m from now) **
+// **************************
+// Benchmark: Benchmarks.SingleServerScenario_WithFullDuplicateItems: Job-LCLOIE(IterationCount=20, IterationTime=200.0000 ms, WarmupCount=5)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet af7b1b7f-b1af-47fb-940f-6c7624598c7e.dll --anonymousPipes 143 144 --benchmarkName Integration.Benchmarks.SingleServerScenario_WithFullDuplicateItems --job "IterationCount=20, IterationTime=200.0000 ms, WarmupCount=5" --benchmarkId 8 in /Users/huseyin/RiderProjects/AdCreativeAI-IntegrationCase-main/Integration/bin/Release/net7.0/af7b1b7f-b1af-47fb-940f-6c7624598c7e/bin/Release/net7.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 7.0.12 (7.0.1223.47720), Arm64 RyuJIT AdvSIMD
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AdvSIMD,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Job-HSKEJA(IterationCount=20, IterationTime=200.0000 ms, WarmupCount=5)
+
+OverheadJitting  1: 1 op, 130500.00 ns, 130.5000 us/op
+WorkloadJitting  1: 1 op, 2079206458.00 ns, 2.0792 s/op
+
+OverheadJitting  2: 1 op, 458.00 ns, 458.0000 ns/op
+WorkloadJitting  2: 1 op, 52376209.00 ns, 52.3762 ms/op
+
+WorkloadPilot    1: 4 op, 197035166.00 ns, 49.2588 ms/op
+
+WorkloadWarmup   1: 4 op, 129541875.00 ns, 32.3855 ms/op
+WorkloadWarmup   2: 4 op, 131669792.00 ns, 32.9174 ms/op
+WorkloadWarmup   3: 4 op, 126335834.00 ns, 31.5840 ms/op
+WorkloadWarmup   4: 4 op, 127038084.00 ns, 31.7595 ms/op
+WorkloadWarmup   5: 4 op, 118454334.00 ns, 29.6136 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 4 op, 100294958.00 ns, 25.0737 ms/op
+WorkloadActual   2: 4 op, 98058833.00 ns, 24.5147 ms/op
+WorkloadActual   3: 4 op, 103589084.00 ns, 25.8973 ms/op
+WorkloadActual   4: 4 op, 100362292.00 ns, 25.0906 ms/op
+WorkloadActual   5: 4 op, 105125791.00 ns, 26.2814 ms/op
+WorkloadActual   6: 4 op, 103183417.00 ns, 25.7959 ms/op
+WorkloadActual   7: 4 op, 110974750.00 ns, 27.7437 ms/op
+WorkloadActual   8: 4 op, 112050917.00 ns, 28.0127 ms/op
+WorkloadActual   9: 4 op, 99594334.00 ns, 24.8986 ms/op
+WorkloadActual  10: 4 op, 101907667.00 ns, 25.4769 ms/op
+WorkloadActual  11: 4 op, 110256875.00 ns, 27.5642 ms/op
+WorkloadActual  12: 4 op, 100408541.00 ns, 25.1021 ms/op
+WorkloadActual  13: 4 op, 99536750.00 ns, 24.8842 ms/op
+WorkloadActual  14: 4 op, 98587667.00 ns, 24.6469 ms/op
+WorkloadActual  15: 4 op, 100082750.00 ns, 25.0207 ms/op
+WorkloadActual  16: 4 op, 104197291.00 ns, 26.0493 ms/op
+WorkloadActual  17: 4 op, 105467625.00 ns, 26.3669 ms/op
+WorkloadActual  18: 4 op, 100735166.00 ns, 25.1838 ms/op
+WorkloadActual  19: 4 op, 112937542.00 ns, 28.2344 ms/op
+WorkloadActual  20: 4 op, 118667500.00 ns, 29.6669 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 4 op, 100294958.00 ns, 25.0737 ms/op
+WorkloadResult   2: 4 op, 98058833.00 ns, 24.5147 ms/op
+WorkloadResult   3: 4 op, 103589084.00 ns, 25.8973 ms/op
+WorkloadResult   4: 4 op, 100362292.00 ns, 25.0906 ms/op
+WorkloadResult   5: 4 op, 105125791.00 ns, 26.2814 ms/op
+WorkloadResult   6: 4 op, 103183417.00 ns, 25.7959 ms/op
+WorkloadResult   7: 4 op, 110974750.00 ns, 27.7437 ms/op
+WorkloadResult   8: 4 op, 112050917.00 ns, 28.0127 ms/op
+WorkloadResult   9: 4 op, 99594334.00 ns, 24.8986 ms/op
+WorkloadResult  10: 4 op, 101907667.00 ns, 25.4769 ms/op
+WorkloadResult  11: 4 op, 110256875.00 ns, 27.5642 ms/op
+WorkloadResult  12: 4 op, 100408541.00 ns, 25.1021 ms/op
+WorkloadResult  13: 4 op, 99536750.00 ns, 24.8842 ms/op
+WorkloadResult  14: 4 op, 98587667.00 ns, 24.6469 ms/op
+WorkloadResult  15: 4 op, 100082750.00 ns, 25.0207 ms/op
+WorkloadResult  16: 4 op, 104197291.00 ns, 26.0493 ms/op
+WorkloadResult  17: 4 op, 105467625.00 ns, 26.3669 ms/op
+WorkloadResult  18: 4 op, 100735166.00 ns, 25.1838 ms/op
+WorkloadResult  19: 4 op, 112937542.00 ns, 28.2344 ms/op
+
+// AfterAll
+// Benchmark Process 17254 has exited with code 0.
+
+Mean = 25.886 ms, StdErr = 0.273 ms (1.05%), N = 19, StdDev = 1.189 ms
+Min = 24.515 ms, Q1 = 25.047 ms, Median = 25.477 ms, Q3 = 26.324 ms, Max = 28.234 ms
+IQR = 1.277 ms, LowerFence = 23.132 ms, UpperFence = 28.240 ms
+ConfidenceInterval = [24.817 ms; 26.956 ms] (CI 99.9%), Margin = 1.070 ms (4.13% of Mean)
+Skewness = 0.78, Kurtosis = 2.13, MValue = 2.36
+
+// ** Remained 1 (%10,0) benchmark(s) to run. Estimated finish 2024-06-22 15:27 (0h 0m from now) **
+// **************************
+// Benchmark: Benchmarks.DistributedSystemScenario_WithFullDuplicateItems: Job-LCLOIE(IterationCount=20, IterationTime=200.0000 ms, WarmupCount=5)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet af7b1b7f-b1af-47fb-940f-6c7624598c7e.dll --anonymousPipes 138 143 --benchmarkName Integration.Benchmarks.DistributedSystemScenario_WithFullDuplicateItems --job "IterationCount=20, IterationTime=200.0000 ms, WarmupCount=5" --benchmarkId 9 in /Users/huseyin/RiderProjects/AdCreativeAI-IntegrationCase-main/Integration/bin/Release/net7.0/af7b1b7f-b1af-47fb-940f-6c7624598c7e/bin/Release/net7.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 7.0.12 (7.0.1223.47720), Arm64 RyuJIT AdvSIMD
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AdvSIMD,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Job-WGHBAB(IterationCount=20, IterationTime=200.0000 ms, WarmupCount=5)
+
+OverheadJitting  1: 1 op, 111958.00 ns, 111.9580 us/op
+WorkloadJitting  1: 1 op, 239481333.00 ns, 239.4813 ms/op
+
+OverheadJitting  2: 1 op, 167.00 ns, 167.0000 ns/op
+WorkloadJitting  2: 1 op, 210189250.00 ns, 210.1892 ms/op
+
+WorkloadWarmup   1: 1 op, 224042583.00 ns, 224.0426 ms/op
+WorkloadWarmup   2: 1 op, 193240834.00 ns, 193.2408 ms/op
+WorkloadWarmup   3: 1 op, 192200209.00 ns, 192.2002 ms/op
+WorkloadWarmup   4: 1 op, 185183959.00 ns, 185.1840 ms/op
+WorkloadWarmup   5: 1 op, 185559584.00 ns, 185.5596 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 183590417.00 ns, 183.5904 ms/op
+WorkloadActual   2: 1 op, 183076000.00 ns, 183.0760 ms/op
+WorkloadActual   3: 1 op, 186681417.00 ns, 186.6814 ms/op
+WorkloadActual   4: 1 op, 186576334.00 ns, 186.5763 ms/op
+WorkloadActual   5: 1 op, 188948541.00 ns, 188.9485 ms/op
+WorkloadActual   6: 1 op, 199631875.00 ns, 199.6319 ms/op
+WorkloadActual   7: 1 op, 203438208.00 ns, 203.4382 ms/op
+WorkloadActual   8: 1 op, 194632084.00 ns, 194.6321 ms/op
+WorkloadActual   9: 1 op, 191524834.00 ns, 191.5248 ms/op
+WorkloadActual  10: 1 op, 185458959.00 ns, 185.4590 ms/op
+WorkloadActual  11: 1 op, 185975750.00 ns, 185.9758 ms/op
+WorkloadActual  12: 1 op, 181103458.00 ns, 181.1035 ms/op
+WorkloadActual  13: 1 op, 182480708.00 ns, 182.4807 ms/op
+WorkloadActual  14: 1 op, 191927083.00 ns, 191.9271 ms/op
+WorkloadActual  15: 1 op, 188245709.00 ns, 188.2457 ms/op
+WorkloadActual  16: 1 op, 295251625.00 ns, 295.2516 ms/op
+WorkloadActual  17: 1 op, 214918667.00 ns, 214.9187 ms/op
+WorkloadActual  18: 1 op, 212632291.00 ns, 212.6323 ms/op
+WorkloadActual  19: 1 op, 367954500.00 ns, 367.9545 ms/op
+WorkloadActual  20: 1 op, 207907541.00 ns, 207.9075 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 183590417.00 ns, 183.5904 ms/op
+WorkloadResult   2: 1 op, 183076000.00 ns, 183.0760 ms/op
+WorkloadResult   3: 1 op, 186681417.00 ns, 186.6814 ms/op
+WorkloadResult   4: 1 op, 186576334.00 ns, 186.5763 ms/op
+WorkloadResult   5: 1 op, 188948541.00 ns, 188.9485 ms/op
+WorkloadResult   6: 1 op, 199631875.00 ns, 199.6319 ms/op
+WorkloadResult   7: 1 op, 203438208.00 ns, 203.4382 ms/op
+WorkloadResult   8: 1 op, 194632084.00 ns, 194.6321 ms/op
+WorkloadResult   9: 1 op, 191524834.00 ns, 191.5248 ms/op
+WorkloadResult  10: 1 op, 185458959.00 ns, 185.4590 ms/op
+WorkloadResult  11: 1 op, 185975750.00 ns, 185.9758 ms/op
+WorkloadResult  12: 1 op, 181103458.00 ns, 181.1035 ms/op
+WorkloadResult  13: 1 op, 182480708.00 ns, 182.4807 ms/op
+WorkloadResult  14: 1 op, 191927083.00 ns, 191.9271 ms/op
+WorkloadResult  15: 1 op, 188245709.00 ns, 188.2457 ms/op
+WorkloadResult  16: 1 op, 214918667.00 ns, 214.9187 ms/op
+WorkloadResult  17: 1 op, 212632291.00 ns, 212.6323 ms/op
+WorkloadResult  18: 1 op, 207907541.00 ns, 207.9075 ms/op
+
+// AfterAll
+// Benchmark Process 17257 has exited with code 0.
+
+Mean = 192.708 ms, StdErr = 2.499 ms (1.30%), N = 18, StdDev = 10.603 ms
+Min = 181.103 ms, Q1 = 185.588 ms, Median = 188.597 ms, Q3 = 198.382 ms, Max = 214.919 ms
+IQR = 12.794 ms, LowerFence = 166.398 ms, UpperFence = 217.573 ms
+ConfidenceInterval = [182.799 ms; 202.618 ms] (CI 99.9%), Margin = 9.909 ms (5.14% of Mean)
+Skewness = 0.86, Kurtosis = 2.3, MValue = 2
+
+// ** Remained 0 (%0,0) benchmark(s) to run. Estimated finish 2024-06-22 15:27 (0h 0m from now) **
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts/results/Integration.Benchmarks-report.csv
+  BenchmarkDotNet.Artifacts/results/Integration.Benchmarks-report.html
+  BenchmarkDotNet.Artifacts/results/Integration.Benchmarks-report-default.md
+
+// * Detailed results *
+Benchmarks.SingleServerScenario_WithFullUniqueItems: Job-LCLOIE(IterationCount=20, IterationTime=200.0000 ms, WarmupCount=5)
+Runtime = .NET 7.0.12 (7.0.1223.47720), Arm64 RyuJIT AdvSIMD; GC = Concurrent Workstation
+Mean = 67.045 ms, StdErr = 1.891 ms (2.82%), N = 20, StdDev = 8.456 ms
+Min = 57.148 ms, Q1 = 57.869 ms, Median = 68.055 ms, Q3 = 75.608 ms, Max = 77.600 ms
+IQR = 17.738 ms, LowerFence = 31.262 ms, UpperFence = 102.215 ms
+ConfidenceInterval = [59.703 ms; 74.388 ms] (CI 99.9%), Margin = 7.343 ms (10.95% of Mean)
+Skewness = 0.03, Kurtosis = 1.15, MValue = 3.11
+-------------------- Histogram --------------------
+[55.657 ms ; 63.835 ms) | @@@@@@@@@
+[63.835 ms ; 71.379 ms) | @@@
+[71.379 ms ; 79.556 ms) | @@@@@@@@
+---------------------------------------------------
+
+Benchmarks.DistributedSystemScenario_WithFullUniqueItems: Job-LCLOIE(IterationCount=20, IterationTime=200.0000 ms, WarmupCount=5)
+Runtime = .NET 7.0.12 (7.0.1223.47720), Arm64 RyuJIT AdvSIMD; GC = Concurrent Workstation
+Mean = 185.129 ms, StdErr = 1.059 ms (0.57%), N = 18, StdDev = 4.492 ms
+Min = 178.230 ms, Q1 = 182.061 ms, Median = 185.245 ms, Q3 = 187.334 ms, Max = 196.563 ms
+IQR = 5.273 ms, LowerFence = 174.152 ms, UpperFence = 195.243 ms
+ConfidenceInterval = [180.932 ms; 189.327 ms] (CI 99.9%), Margin = 4.198 ms (2.27% of Mean)
+Skewness = 0.7, Kurtosis = 3.13, MValue = 2
+-------------------- Histogram --------------------
+[177.172 ms ; 181.563 ms) | @@@
+[181.563 ms ; 186.062 ms) | @@@@@@@@
+[186.062 ms ; 193.659 ms) | @@@@@@
+[193.659 ms ; 198.812 ms) | @
+---------------------------------------------------
+
+Benchmarks.SingleServerScenario_With25PercentDuplicateItem: Job-LCLOIE(IterationCount=20, IterationTime=200.0000 ms, WarmupCount=5)
+Runtime = .NET 7.0.12 (7.0.1223.47720), Arm64 RyuJIT AdvSIMD; GC = Concurrent Workstation
+Mean = 46.279 ms, StdErr = 1.592 ms (3.44%), N = 20, StdDev = 7.118 ms
+Min = 40.465 ms, Q1 = 41.692 ms, Median = 42.440 ms, Q3 = 51.876 ms, Max = 65.729 ms
+IQR = 10.184 ms, LowerFence = 26.416 ms, UpperFence = 67.152 ms
+ConfidenceInterval = [40.097 ms; 52.460 ms] (CI 99.9%), Margin = 6.181 ms (13.36% of Mean)
+Skewness = 1.23, Kurtosis = 3.36, MValue = 2.86
+-------------------- Histogram --------------------
+[39.140 ms ; 46.024 ms) | @@@@@@@@@@@@@@
+[46.024 ms ; 50.192 ms) | 
+[50.192 ms ; 57.076 ms) | @@@@@
+[57.076 ms ; 62.287 ms) | 
+[62.287 ms ; 69.171 ms) | @
+---------------------------------------------------
+
+Benchmarks.DistributedSystemScenario_With25PercentDuplicateItems: Job-LCLOIE(IterationCount=20, IterationTime=200.0000 ms, WarmupCount=5)
+Runtime = .NET 7.0.12 (7.0.1223.47720), Arm64 RyuJIT AdvSIMD; GC = Concurrent Workstation
+Mean = 192.495 ms, StdErr = 1.254 ms (0.65%), N = 20, StdDev = 5.606 ms
+Min = 181.441 ms, Q1 = 189.876 ms, Median = 193.696 ms, Q3 = 196.687 ms, Max = 199.576 ms
+IQR = 6.811 ms, LowerFence = 179.660 ms, UpperFence = 206.903 ms
+ConfidenceInterval = [187.627 ms; 197.363 ms] (CI 99.9%), Margin = 4.868 ms (2.53% of Mean)
+Skewness = -0.63, Kurtosis = 2.19, MValue = 2
+-------------------- Histogram --------------------
+[178.730 ms ; 187.613 ms) | @@@@@
+[187.613 ms ; 194.235 ms) | @@@@@
+[194.235 ms ; 199.656 ms) | @@@@@@@@@@
+---------------------------------------------------
+
+Benchmarks.SingleServerScenario_With50PercentDuplicateItems: Job-LCLOIE(IterationCount=20, IterationTime=200.0000 ms, WarmupCount=5)
+Runtime = .NET 7.0.12 (7.0.1223.47720), Arm64 RyuJIT AdvSIMD; GC = Concurrent Workstation
+Mean = 41.535 ms, StdErr = 0.426 ms (1.03%), N = 16, StdDev = 1.705 ms
+Min = 38.700 ms, Q1 = 40.007 ms, Median = 42.257 ms, Q3 = 42.600 ms, Max = 43.923 ms
+IQR = 2.593 ms, LowerFence = 36.117 ms, UpperFence = 46.489 ms
+ConfidenceInterval = [39.799 ms; 43.271 ms] (CI 99.9%), Margin = 1.736 ms (4.18% of Mean)
+Skewness = -0.25, Kurtosis = 1.52, MValue = 3.25
+-------------------- Histogram --------------------
+[38.619 ms ; 40.395 ms) | @@@@@@
+[40.395 ms ; 41.970 ms) | @
+[41.970 ms ; 43.746 ms) | @@@@@@@@
+[43.746 ms ; 44.811 ms) | @
+---------------------------------------------------
+
+Benchmarks.DistributedSystemScenario_With50PercentDuplicateItems: Job-LCLOIE(IterationCount=20, IterationTime=200.0000 ms, WarmupCount=5)
+Runtime = .NET 7.0.12 (7.0.1223.47720), Arm64 RyuJIT AdvSIMD; GC = Concurrent Workstation
+Mean = 186.412 ms, StdErr = 0.717 ms (0.38%), N = 19, StdDev = 3.126 ms
+Min = 181.303 ms, Q1 = 184.002 ms, Median = 186.073 ms, Q3 = 188.674 ms, Max = 192.108 ms
+IQR = 4.672 ms, LowerFence = 176.994 ms, UpperFence = 195.683 ms
+ConfidenceInterval = [183.600 ms; 189.224 ms] (CI 99.9%), Margin = 2.812 ms (1.51% of Mean)
+Skewness = 0.23, Kurtosis = 1.79, MValue = 2
+-------------------- Histogram --------------------
+[179.766 ms ; 186.777 ms) | @@@@@@@@@@@
+[186.777 ms ; 193.645 ms) | @@@@@@@@
+---------------------------------------------------
+
+Benchmarks.SingleServerScenario_With75PercentDuplicateItems: Job-LCLOIE(IterationCount=20, IterationTime=200.0000 ms, WarmupCount=5)
+Runtime = .NET 7.0.12 (7.0.1223.47720), Arm64 RyuJIT AdvSIMD; GC = Concurrent Workstation
+Mean = 35.049 ms, StdErr = 0.323 ms (0.92%), N = 18, StdDev = 1.369 ms
+Min = 32.401 ms, Q1 = 34.080 ms, Median = 34.847 ms, Q3 = 35.865 ms, Max = 37.874 ms
+IQR = 1.786 ms, LowerFence = 31.401 ms, UpperFence = 38.544 ms
+ConfidenceInterval = [33.769 ms; 36.328 ms] (CI 99.9%), Margin = 1.280 ms (3.65% of Mean)
+Skewness = 0.19, Kurtosis = 2.44, MValue = 2
+-------------------- Histogram --------------------
+[31.715 ms ; 33.001 ms) | @
+[33.001 ms ; 34.372 ms) | @@@@
+[34.372 ms ; 36.065 ms) | @@@@@@@@@@
+[36.065 ms ; 37.924 ms) | @@@
+---------------------------------------------------
+
+Benchmarks.DistributedSystemScenario_With75PercentDuplicateItems: Job-LCLOIE(IterationCount=20, IterationTime=200.0000 ms, WarmupCount=5)
+Runtime = .NET 7.0.12 (7.0.1223.47720), Arm64 RyuJIT AdvSIMD; GC = Concurrent Workstation
+Mean = 188.193 ms, StdErr = 1.199 ms (0.64%), N = 18, StdDev = 5.085 ms
+Min = 179.452 ms, Q1 = 186.055 ms, Median = 187.430 ms, Q3 = 191.355 ms, Max = 198.081 ms
+IQR = 5.300 ms, LowerFence = 178.104 ms, UpperFence = 199.306 ms
+ConfidenceInterval = [183.440 ms; 192.946 ms] (CI 99.9%), Margin = 4.753 ms (2.53% of Mean)
+Skewness = 0.03, Kurtosis = 2.2, MValue = 2
+-------------------- Histogram --------------------
+[179.199 ms ; 184.293 ms) | @@@@
+[184.293 ms ; 190.912 ms) | @@@@@@@@@
+[190.912 ms ; 195.856 ms) | @@@@
+[195.856 ms ; 200.628 ms) | @
+---------------------------------------------------
+
+Benchmarks.SingleServerScenario_WithFullDuplicateItems: Job-LCLOIE(IterationCount=20, IterationTime=200.0000 ms, WarmupCount=5)
+Runtime = .NET 7.0.12 (7.0.1223.47720), Arm64 RyuJIT AdvSIMD; GC = Concurrent Workstation
+Mean = 25.886 ms, StdErr = 0.273 ms (1.05%), N = 19, StdDev = 1.189 ms
+Min = 24.515 ms, Q1 = 25.047 ms, Median = 25.477 ms, Q3 = 26.324 ms, Max = 28.234 ms
+IQR = 1.277 ms, LowerFence = 23.132 ms, UpperFence = 28.240 ms
+ConfidenceInterval = [24.817 ms; 26.956 ms] (CI 99.9%), Margin = 1.070 ms (4.13% of Mean)
+Skewness = 0.78, Kurtosis = 2.13, MValue = 2.36
+-------------------- Histogram --------------------
+[23.930 ms ; 24.882 ms) | @@
+[24.882 ms ; 26.051 ms) | @@@@@@@@@@@
+[26.051 ms ; 27.315 ms) | @@
+[27.315 ms ; 28.484 ms) | @@@@
+---------------------------------------------------
+
+Benchmarks.DistributedSystemScenario_WithFullDuplicateItems: Job-LCLOIE(IterationCount=20, IterationTime=200.0000 ms, WarmupCount=5)
+Runtime = .NET 7.0.12 (7.0.1223.47720), Arm64 RyuJIT AdvSIMD; GC = Concurrent Workstation
+Mean = 192.708 ms, StdErr = 2.499 ms (1.30%), N = 18, StdDev = 10.603 ms
+Min = 181.103 ms, Q1 = 185.588 ms, Median = 188.597 ms, Q3 = 198.382 ms, Max = 214.919 ms
+IQR = 12.794 ms, LowerFence = 166.398 ms, UpperFence = 217.573 ms
+ConfidenceInterval = [182.799 ms; 202.618 ms] (CI 99.9%), Margin = 9.909 ms (5.14% of Mean)
+Skewness = 0.86, Kurtosis = 2.3, MValue = 2
+-------------------- Histogram --------------------
+[175.793 ms ; 181.894 ms) | @
+[181.894 ms ; 193.725 ms) | @@@@@@@@@@@
+[193.725 ms ; 206.103 ms) | @@@
+[206.103 ms ; 216.723 ms) | @@@
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet v0.13.12, macOS Sonoma 14.4 (23E214) [Darwin 23.4.0]
+Apple M1 Pro, 1 CPU, 8 logical and 8 physical cores
+.NET SDK 7.0.309
+  [Host]     : .NET 7.0.12 (7.0.1223.47720), Arm64 RyuJIT AdvSIMD
+  Job-LCLOIE : .NET 7.0.12 (7.0.1223.47720), Arm64 RyuJIT AdvSIMD
+
+IterationCount=20  IterationTime=200.0000 ms  WarmupCount=5  
+
+| Method                                                | Mean      | Error    | StdDev    |
+|------------------------------------------------------ |----------:|---------:|----------:|
+| SingleServerScenario_WithFullUniqueItems              |  67.05 ms | 7.343 ms |  8.456 ms |
+| DistributedSystemScenario_WithFullUniqueItems         | 185.13 ms | 4.198 ms |  4.492 ms |
+| SingleServerScenario_With25PercentDuplicateItem       |  46.28 ms | 6.181 ms |  7.118 ms |
+| DistributedSystemScenario_With25PercentDuplicateItems | 192.50 ms | 4.868 ms |  5.606 ms |
+| SingleServerScenario_With50PercentDuplicateItems      |  41.53 ms | 1.736 ms |  1.705 ms |
+| DistributedSystemScenario_With50PercentDuplicateItems | 186.41 ms | 2.812 ms |  3.126 ms |
+| SingleServerScenario_With75PercentDuplicateItems      |  35.05 ms | 1.280 ms |  1.369 ms |
+| DistributedSystemScenario_With75PercentDuplicateItems | 188.19 ms | 4.753 ms |  5.085 ms |
+| SingleServerScenario_WithFullDuplicateItems           |  25.89 ms | 1.070 ms |  1.189 ms |
+| DistributedSystemScenario_WithFullDuplicateItems      | 192.71 ms | 9.909 ms | 10.603 ms |
+
+// * Legends *
+  Mean   : Arithmetic mean of all measurements
+  Error  : Half of 99.9% confidence interval
+  StdDev : Standard deviation of all measurements
+  1 ms   : 1 Millisecond (0.001 sec)
+
+// ***** BenchmarkRunner: End *****
+Run time: 00:01:45 (105.54 sec), executed benchmarks: 10
+
+Global total time: 00:01:48 (108.22 sec), executed benchmarks: 10
+// * Artifacts cleanup *
+Artifacts cleanup is finished
