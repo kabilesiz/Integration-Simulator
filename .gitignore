@@ -10,6 +10,8 @@ bld/
 [Oo]bj/
 [Ll]og/
 
+.DS_Store
+
 *.DotSettings.user
 
 .idea/
